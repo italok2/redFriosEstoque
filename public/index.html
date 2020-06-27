@@ -21,7 +21,7 @@
   <style media="screen">
     body {
       background: #ECEFF1;
-      color: rgba(0, 0, 0, 0.87);
+      color: #ec0d0d;
       font-family: Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -36,7 +36,7 @@
     }
 
     #message h2 {
-      color: #039be5;
+      color: #ec0d0d;
       font-weight: bold;
       font-size: 16px;
       margin: 0 0 8px;
@@ -87,7 +87,7 @@
       }
 
       body {
-        border-top: 16px solid #039be5;
+        border-top: 16px solid #ec0d0d;
       }
     }
   </style>
@@ -131,20 +131,37 @@
 
 <script>
 
-// $(document).ready(function() {
+let isMudou = false;
 
- 
- 
-  
-// });
+// while(!isMudou){
+  setInterval(mudarStyle, 700);
+// }
 
-setInterval(teste, 700);
 
-function teste(){
+
+
+function mudarStyle(){
   if(document.querySelector(".firebaseui-title")){
-    document.querySelector(".firebaseui-title").textContent = "Bem Vindo, Favor Logar";
+    document.querySelector(".firebaseui-title").textContent = "Login";
+    isMudou = true;
   }
+
+  
+  var listaBotoes = document.querySelectorAll("button");
+
+  for (let index = 0; index < listaBotoes.length; index++) {
+  var botao = listaBotoes[index];
+  botao.style.background="#ec0d0d";
+  botao.style.color="white"
+
+    
+  }
+  
+  
+  
 }
+
+
 
 </script>
 
